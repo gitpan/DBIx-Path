@@ -1,4 +1,4 @@
-DBIx::Path version 0.01
+DBIx::Path version 0.02
 =======================
 
 DBIx::Path is used to navigate through trees or directed graphs 

@@ -5,7 +5,7 @@ use warnings;
 use DBI;
 use Carp qw(croak);
 
-our $VERSION=0.01;
+our $VERSION=0.02;
 
 =head1 NAME
 
@@ -267,7 +267,8 @@ sub set {
 
 The C<resolve> method traverses the provided path; that is, it looks 
 up the child of $node named $components[0], then looks up the child of 
-the just-retrieved node named $components[1], and so on.
+the just-retrieved node named $components[1], and so on.  Components
+which are undefined or consist of the empty string will be ignored.
 
 Return value is the same as C<get> when a name anywhere in @components 
 does not resolve.
@@ -296,6 +297,7 @@ sub resolve {
 	our $PARENT=$me;
 	
 	for(@components) {
+        next unless defined $_ and $_ ne '';
 		$PARENT=$cursor;
 		$cursor=$cursor->get($_);
 		return undef unless defined $cursor;
