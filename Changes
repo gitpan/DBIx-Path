@@ -1,0 +1,6 @@
+Revision history for Perl extension DBIx::Path.
+
+0.01  Sat Jan 22 22:56:27 2005
+	- original version; created by h2xs 1.23 with options
+		-AX DBIx::Path
+
