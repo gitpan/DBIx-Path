@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name: DBIx-Path
-version: 0.02
+version: 0.03
 author:
   - Brent 'Dax' Royal-Gordon, <brentdax@cpan.org>
 abstract: |-
@@ -15,5 +15,5 @@ recommends:
 provides:
   DBIx::Path:
     file: lib/DBIx/Path.pm
-    version: 0.02
+    version: 0.03
 generated_by: Module::Build version 0.2607

@@ -1,4 +1,4 @@
-DBIx::Path version 0.02
+DBIx::Path version 0.03
 =======================
 
 DBIx::Path is used to navigate through trees or directed graphs 
@@ -10,6 +10,14 @@ but with multiple parents for a given node.
 DBIx::Path is a pure-Perl module, which will likely not parse 
 correctly on anything before Perl 5.6.  It uses Perl's standard
 DBI database interface.
+
+IN THIS VERSION
+
+This version includes two new methods, C<parents> and C<reverse>.
+The first retrieves all parents and names of the current node;
+the second returns all paths leading to the current node.  This
+version also adds hooks to lock tables before and after all
+queries.
 
 INSTALLATION
 
@@ -57,9 +65,8 @@ For testing, you may want:
 
 COPYRIGHT AND LICENCE
 
-Put the correct copyright and licence information here.
-
-Copyright (C) 2005 by Brent Dax <brentdax@cpan.org>
+Copyright 2005 by Brent Dax <brentdax@cpan.org>.  All rights
+reserved
 
 This library is free software; it can be used, redistributed
 and/or modified under the same terms as Perl itself.
